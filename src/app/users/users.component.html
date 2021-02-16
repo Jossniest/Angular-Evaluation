@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <app-user-edit></app-user-edit>
+        </div>
+        <div class="col-md-8" *ngFor="let user of users; let i = index">
+            <app-user [user]="user" [id]="i"></app-user>
+        </div>
+    </div>
+</div>

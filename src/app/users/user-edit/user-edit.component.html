@@ -1,0 +1,42 @@
+<form novalidate autocomplete="off" (ngSubmit)="OnSubmit(f)" #f="ngForm" class="my-3">
+    <input type="text" name="id" [value]="user.id"/>
+    <div class="Form-Group">
+        <label>Nombre</label>
+        <input class="Form-Control" type="text" name="nombre" ngModel required>
+    </div>
+    <div class="Form-Group">
+        <label>Apellido</label>
+        <input class="Form-Control" type="text" name="apellido" ngModel required>
+    </div>
+    <div class="Form-Group">
+        <label>Cedula</label>
+        <input class="Form-Control" type="text" name="cedula" ngModel required minlength="11" maxlength="11">
+    </div>
+    <div class="Form-Group">
+        <label>Edad</label>
+        <input class="Form-Control" type="text" name="edad" ngModel required maxlength="3">
+    </div>
+    <div class="Form-Group">
+        <label>Sexo</label>
+        <input class="Form-Control" type="text" name="sexo" placeholder="M/F" ngModel required maxlength="1"> 
+    </div>
+    <div class="Form-Group">
+        <label>Correo Electronico</label>
+        <input class="Form-Control" type="email" name="correoElectronico" ngModel required email>
+    </div>
+    <div class="Form-Group"> 
+        <label>Direccion</label>
+        <input class="Form-Control" type="text" name="direccion" ngModel>
+    </div>
+    <div class="Form-Group">
+        <label>Lugar de Nacimiento</label>
+        <input class="Form-Control" type="text" name="LugarNacimiento" ngModel>
+    </div>
+    <div class="Form-Group">
+        <label>Status</label>
+        <input class="Form-Control" type="text" name="status" placeholder="Activo/Inactivo"  ngModel>
+    </div>
+    <div class="Form-Group">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="!f.valid">Enviar</button>
+    </div>
+</form>
